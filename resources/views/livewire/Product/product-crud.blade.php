@@ -56,19 +56,20 @@
                                 {{ $attribute->name }}
                             </label>
                             @if (in_array($attribute->id, $selectedAttributes))
-                                <div>
-                                    <label>مقدار (مثلاً قرمز)</label>
-                                    <input type="text" wire:model="attributeValues.{{ $attribute->id }}" class="form-control">
-                                </div>
-                                <div>
-                                    <label>تغییر قیمت</label>
-                                    <input type="number" wire:model="priceAdjustments.{{ $attribute->id }}" class="form-control">
-                                </div>
-                                <div>
-                                    <label>موجودی</label>
-                                    <input type="number" wire:model="attributeStocks.{{ $attribute->id }}" class="form-control">
-                                </div>
-                            @endif
+                            <div>
+                                <label>مقدار (مثلاً قرمز)</label>
+                                <input type="text" wire:model="attributeValues.{{ $attribute->id }}" class="form-control">
+                            </div>
+                            <div>
+                                <label>تغییر قیمت</label>
+                                <input type="number" wire:model="priceAdjustments.{{ $attribute->id }}" class="form-control">
+                            </div>
+                            <div>
+                                <label>موجودی</label>
+                                <input type="number" wire:model="attributeStocks.{{ $attribute->id }}" class="form-control">
+                            </div>
+                        @endif
+                        
                         </div>
                     @endforeach
 

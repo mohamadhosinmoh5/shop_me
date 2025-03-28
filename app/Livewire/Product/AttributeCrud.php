@@ -26,7 +26,7 @@ class AttributeCrud extends Component
     public function store()
     {
         $this->validate([
-            'name' => 'required|unique:attributes,name,' . $this->attributeId,
+            'name' => 'required|unique:attributes,name,' . ($this->attributeId ?? 'NULL'),
         ]);
 
         Attribute::updateOrCreate(['id' => $this->attributeId], [

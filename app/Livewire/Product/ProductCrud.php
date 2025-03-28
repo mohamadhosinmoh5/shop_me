@@ -12,7 +12,7 @@ class ProductCrud extends Component
     use WithFileUploads;
 
     public $products, $name, $description, $price, $stock, $productId, $isDigital = false;
-    public $attributes = [], $selectedAttributes = [], $attributeValues = [], $priceAdjustments = [], $attributeStocks = [];
+    public  $selectedAttributes = [], $attributeValues = [], $priceAdjustments = [], $attributeStocks = [];
     public $discountPercentage, $startDate, $endDate;
     public $digitalFile; // برای آپلود فایل
     public $isOpen = false;
@@ -52,15 +52,17 @@ class ProductCrud extends Component
         // ذخیره ویژگی‌ها
         if (!empty($this->selectedAttributes)) {
             $syncData = [];
-            foreach ($this->selectedAttributes as $index => $attributeId) {
+            foreach ($this->selectedAttributes as $attributeId) { // مستقیم مقداردهی
                 $syncData[$attributeId] = [
-                    'value' => $this->attributeValues[$index] ?? '',
-                    'price_adjustment' => $this->priceAdjustments[$index] ?? 0,
-                    'stock' => $this->attributeStocks[$index] ?? 0,
+                    'value' => $this->attributeValues[$attributeId] ?? '',
+                    'price_adjustment' => $this->priceAdjustments[$attributeId] ?? 0,
+                    'stock' => $this->attributeStocks[$attributeId] ?? 0,
                 ];
             }
             $product->attributes()->sync($syncData);
         }
+        
+        
 
         // ذخیره تخفیف
         if ($this->discountPercentage) {
