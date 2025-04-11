@@ -21,11 +21,11 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="white-button first-button scroll-to-section">
-                                            <a href="#contact">{{ translate('front.free_quote') }} <i
+                                            <a href="{{url('/shop')}}">{{ translate('front.free_quote1') }} <i
                                                     class="fab fa-apple"></i></a>
                                         </div>
                                         <div class="white-button scroll-to-section">
-                                            <a href="#contact">{{ translate('front.free_quote') }} <i
+                                            <a href="{{url('/learning')}}">{{ translate('front.free_quote2') }} <i
                                                     class="fab fa-google-play"></i></a>
                                         </div>
                                     </div>
@@ -427,26 +427,6 @@
                         <p>{{ translate('front.pricing_desc') }}</p>
                     </div>
                 </div>
-                {{-- <div class="col-lg-4">
-                    <div class="pricing-item-regular">
-                        <span class="price">$12</span>
-                        <h4>{{ translate('front.standard_plan_app') }}</h4>
-                        <div class="icon">
-                            <img src="{{ asset('assets/images/pricing-table-01.png') }}" alt="">
-                        </div>
-                        <ul>
-                            <li>{{ translate('front.lorem_ipsum_dolores') }}</li>
-                            <li>{{ translate('front.storage_20tb') }}</li>
-                            <li class="non-function">{{ translate('front.lifetime_support') }}</li>
-                            <li class="non-function">{{ translate('front.premium_addons') }}</li>
-                            <li class="non-function">{{ translate('front.fastest_network') }}</li>
-                            <li class="non-function">{{ translate('front.more_options') }}</li>
-                        </ul>
-                        <div class="border-button">
-                            <a href="#">{{ translate('front.purchase_now') }}</a>
-                        </div>
-                    </div>
-                </div> --}}
                 <div class="col-lg-4">
                     <div class="pricing-item-pro">
                         <span class="price">$25</span>
@@ -467,31 +447,9 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col-lg-4">
-                    <div class="pricing-item-regular">
-                        <span class="price">$66</span>
-                        <h4>{{ translate('front.premium_plan_app') }}</h4>
-                        <div class="icon">
-                            <img src="{{ asset('assets/images/pricing-table-01.png') }}" alt="">
-                        </div>
-                        <ul>
-                            <li>{{ translate('front.lorem_ipsum_dolores') }}</li>
-                            <li>{{ translate('front.storage_120tb') }}</li>
-                            <li>{{ translate('front.lifetime_support') }}</li>
-                            <li>{{ translate('front.premium_addons') }}</li>
-                            <li>{{ translate('front.fastest_network') }}</li>
-                            <li>{{ translate('front.more_options') }}</li>
-                        </ul>
-                        <div class="border-button">
-                            <a href="#">{{ translate('front.purchase_now') }}</a>
-                        </div>
-                    </div>
-                </div> --}}
             </div>
         </div>
 
-
-        {{-- @livewire('dashboard-component') <!-- نمایش کامپوننت لایو وایر --> --}}
     @endsection
 
     @section('scripts')

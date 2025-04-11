@@ -3,7 +3,7 @@
 return [
     // Main Banner
     'get_latest_app' => 'A quick look at the Vitrino platform',
-    'chain_app_dev_desc' => 'At Vitrino, our core services are based on three main offerings: providing virtual training, digital products and services, and professional website design consulting.',
+    'chain_app_dev_desc' => 'At Vitrino, our core foundation is based on three main service offerings: providing virtual training, delivering digital products and services, and professional website consulting and design.',
     'free_quote' => 'Request a free service',
 
     // Services Section
