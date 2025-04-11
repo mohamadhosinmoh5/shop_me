@@ -284,7 +284,7 @@
                         <div class="copyright-text">
                             <p>{{ translate('front.copyright') }}
                                 <br>{{ translate('front.design') }}: <a href="https://templatemo.com/"
-                                    target="_blank" title="css templates">TemplateMo</a>
+                                    target="_blank" title="css templates">vitrinow.ir</a>
                             </p>
                         </div>
                     </div>
