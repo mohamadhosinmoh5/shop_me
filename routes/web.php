@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Product as ProductUrl;
 use App\Livewire as liveUrl;
-Route::prefix('/')->group(function () {
+
+Route::prefix('/')->middleware(['\App\Http\Middleware\RedirectByCountry'])->group(function () {
     Route::get('/', liveUrl\MasterFront::class);
 
     Route::get('/products', ProductUrl\ProductCrud::class);

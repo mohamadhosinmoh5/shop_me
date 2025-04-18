@@ -10,5 +10,8 @@ class MasterFront extends Component
     {
         return view('livewire.front.index')->layout('master');
     }
+
+
+
 }
 
